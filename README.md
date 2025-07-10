@@ -181,34 +181,34 @@ O projeto utiliza o H2 Database em memória, que é ideal para desenvolvimento e
 ### Histórias de Usuário (HU) - 100% Implementadas
 
 #### Alunos
-- **HU1** - Cadastro de Aluno ✅
-- **HU2** - Edição de Aluno ✅
-- **HU3** - Remoção de Aluno ✅
-- **HU4** - Consulta de Alunos ✅
+- **HU1** - Cadastro de Aluno 
+- **HU2** - Edição de Aluno 
+- **HU3** - Remoção de Aluno 
+- **HU4** - Consulta de Alunos 
 
 #### Professores
-- **HU5** - Cadastro de Professor ✅
-- **HU6** - Edição de Professor ✅
-- **HU7** - Remoção de Professor ✅
-- **HU8** - Consulta de Professores ✅
+- **HU5** - Cadastro de Professor 
+- **HU6** - Edição de Professor 
+- **HU7** - Remoção de Professor 
+- **HU8** - Consulta de Professores 
 
 #### Disciplinas
-- **HU9** - Cadastro de Disciplina ✅
-- **HU10** - Edição de Disciplina ✅
-- **HU11** - Remoção de Disciplina ✅
-- **HU12** - Consulta de Disciplinas ✅
+- **HU9** - Cadastro de Disciplina 
+- **HU10** - Edição de Disciplina 
+- **HU11** - Remoção de Disciplina 
+- **HU12** - Consulta de Disciplinas 
 
 #### Turmas
-- **HU13** - Cadastro de Turma ✅
-- **HU14** - Edição de Turma ✅
-- **HU15** - Remoção de Turma ✅
-- **HU16** - Consulta de Turmas ✅
+- **HU13** - Cadastro de Turma 
+- **HU14** - Edição de Turma 
+- **HU15** - Remoção de Turma 
+- **HU16** - Consulta de Turmas 
 
 #### Matrículas
-- **HU17** - Cadastro de Matrícula ✅
-- **HU18** - Edição de Matrícula ✅
-- **HU19** - Remoção de Matrícula ✅
-- **HU20** - Consulta de Matrículas (por aluno, turma e situação) ✅
+- **HU17** - Cadastro de Matrícula 
+- **HU18** - Edição de Matrícula 
+- **HU19** - Remoção de Matrícula 
+- **HU20** - Consulta de Matrículas (por aluno, turma e situação) 
 
 ### Validações Implementadas
 - **Lotação de Turmas**: Validação de capacidade máxima (40 alunos por turma)
