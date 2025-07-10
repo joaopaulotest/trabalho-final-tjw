@@ -107,6 +107,9 @@ src/
 - `POST /matriculas` - Cadastra nova matrícula
 - `PUT /matriculas/{id}` - Atualiza matrícula
 - `DELETE /matriculas/{id}` - Remove matrícula
+- `GET /matriculas/por-aluno/{alunoId}` - Lista matrículas por aluno (HU20)
+- `GET /matriculas/por-turma/{turmaId}` - Lista matrículas por turma (HU20)
+- `GET /matriculas/por-situacao/{situacao}` - Lista matrículas por situação (HU20)
 
 ## Exemplos de Uso
 
@@ -175,18 +178,42 @@ O projeto utiliza o H2 Database em memória, que é ideal para desenvolvimento e
 
 ## Funcionalidades Implementadas
 
-### Histórias de Usuário (HU)
+### Histórias de Usuário (HU) - 100% Implementadas
 
-- **HU1** - Cadastro de Aluno 
-- **HU2** - Edição de Aluno 
-- **HU3** - Remoção de Aluno 
-- **HU4** - Consulta de Alunos 
+#### Alunos
+- **HU1** - Cadastro de Aluno ✅
+- **HU2** - Edição de Aluno ✅
+- **HU3** - Remoção de Aluno ✅
+- **HU4** - Consulta de Alunos ✅
 
-Além disso, foram implementadas funcionalidades similares para:
-- Professores
-- Disciplinas
-- Turmas
-- Matrículas
+#### Professores
+- **HU5** - Cadastro de Professor ✅
+- **HU6** - Edição de Professor ✅
+- **HU7** - Remoção de Professor ✅
+- **HU8** - Consulta de Professores ✅
+
+#### Disciplinas
+- **HU9** - Cadastro de Disciplina ✅
+- **HU10** - Edição de Disciplina ✅
+- **HU11** - Remoção de Disciplina ✅
+- **HU12** - Consulta de Disciplinas ✅
+
+#### Turmas
+- **HU13** - Cadastro de Turma ✅
+- **HU14** - Edição de Turma ✅
+- **HU15** - Remoção de Turma ✅
+- **HU16** - Consulta de Turmas ✅
+
+#### Matrículas
+- **HU17** - Cadastro de Matrícula ✅
+- **HU18** - Edição de Matrícula ✅
+- **HU19** - Remoção de Matrícula ✅
+- **HU20** - Consulta de Matrículas (por aluno, turma e situação) ✅
+
+### Validações Implementadas
+- **Lotação de Turmas**: Validação de capacidade máxima (40 alunos por turma)
+- **Relacionamentos**: Validação de existência de entidades relacionadas
+- **Dados Iniciais**: Carregamento automático do Professor Cornelli e dados de exemplo
 
 ## Configurações
 

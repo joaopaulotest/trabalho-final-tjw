@@ -23,6 +23,9 @@ public class Turma {
 
     // Nome/identificação da turma (ex: "2024.1-A", "Noturno", etc.)
     private String nome;
+    
+    // Capacidade máxima da turma (para validação de lotação - HU20)
+    private Integer capacidade = 40; // valor padrão
 
     // Construtores
     public Turma() {}
@@ -31,6 +34,13 @@ public class Turma {
         this.disciplina = disciplina;
         this.professor = professor;
         this.nome = nome;
+    }
+    
+    public Turma(Disciplina disciplina, Professor professor, String nome, Integer capacidade) {
+        this.disciplina = disciplina;
+        this.professor = professor;
+        this.nome = nome;
+        this.capacidade = capacidade;
     }
 
     // Getters e Setters
@@ -64,5 +74,13 @@ public class Turma {
     
     public void setNome(String nome) { 
         this.nome = nome; 
+    }
+    
+    public Integer getCapacidade() { 
+        return capacidade; 
+    }
+    
+    public void setCapacidade(Integer capacidade) { 
+        this.capacidade = capacidade; 
     }
 } 

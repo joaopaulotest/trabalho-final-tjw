@@ -53,6 +53,12 @@ public class MatriculaController {
                     return ResponseEntity.badRequest().build();
                 }
                 matricula.setTurma(turma.get());
+                
+                // HU20 - Validação de lotação da turma
+                List<Matricula> matriculasExistentes = matriculaRepository.findByTurmaId(turma.get().getId());
+                if (matriculasExistentes.size() >= turma.get().getCapacidade()) {
+                    return ResponseEntity.badRequest().build(); // Turma lotada
+                }
             }
             
             Matricula matriculaSalva = matriculaRepository.save(matricula);
@@ -137,5 +143,38 @@ public class MatriculaController {
         } else {
             return ResponseEntity.notFound().build();
         }
+    }
+
+    /**
+     * HU20 - Consulta de Matrículas por Aluno
+     * GET /matriculas/por-aluno/{alunoId}
+     * Lista todas as matrículas de um aluno específico
+     */
+    @GetMapping("/por-aluno/{alunoId}")
+    public ResponseEntity<List<Matricula>> listarMatriculasPorAluno(@PathVariable Long alunoId) {
+        List<Matricula> matriculas = matriculaRepository.findByAlunoId(alunoId);
+        return ResponseEntity.ok(matriculas);
+    }
+
+    /**
+     * HU20 - Consulta de Matrículas por Turma
+     * GET /matriculas/por-turma/{turmaId}
+     * Lista todas as matrículas de uma turma específica
+     */
+    @GetMapping("/por-turma/{turmaId}")
+    public ResponseEntity<List<Matricula>> listarMatriculasPorTurma(@PathVariable Long turmaId) {
+        List<Matricula> matriculas = matriculaRepository.findByTurmaId(turmaId);
+        return ResponseEntity.ok(matriculas);
+    }
+
+    /**
+     * HU20 - Consulta de Matrículas por Situação
+     * GET /matriculas/por-situacao/{situacao}
+     * Lista todas as matrículas com uma situação específica
+     */
+    @GetMapping("/por-situacao/{situacao}")
+    public ResponseEntity<List<Matricula>> listarMatriculasPorSituacao(@PathVariable String situacao) {
+        List<Matricula> matriculas = matriculaRepository.findBySituacao(situacao);
+        return ResponseEntity.ok(matriculas);
     }
 } 

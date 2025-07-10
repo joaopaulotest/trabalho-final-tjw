@@ -2,6 +2,7 @@ package com.suapasta.sistemaacademico.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import com.suapasta.sistemaacademico.entities.Matricula;
+import java.util.List;
 
 /**
  * Repository responsável por acessar o banco de dados para a entidade Matricula
@@ -9,9 +10,8 @@ import com.suapasta.sistemaacademico.entities.Matricula;
  */
 public interface MatriculaRepository extends JpaRepository<Matricula, Long> {
     
-    // Aqui podemos adicionar métodos de consulta específicos, se precisar
-    // Por exemplo:
-    // List<Matricula> findByAlunoId(Long alunoId);
-    // List<Matricula> findByTurmaId(Long turmaId);
-    // List<Matricula> findBySituacao(String situacao);
+    // Consultas específicas para atender HU20
+    List<Matricula> findByAlunoId(Long alunoId);
+    List<Matricula> findByTurmaId(Long turmaId);
+    List<Matricula> findBySituacao(String situacao);
 } 
