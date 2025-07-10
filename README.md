@@ -125,8 +125,8 @@ curl -X POST http://localhost:8080/alunos \
 curl -X POST http://localhost:8080/professores \
   -H "Content-Type: application/json" \
   -d '{
-    "nome": "Maria Santos",
-    "area": "Matemática"
+    "nome": "Cornelli",
+    "area": "TJW"
   }'
 ```
 
@@ -135,9 +135,9 @@ curl -X POST http://localhost:8080/professores \
 curl -X POST http://localhost:8080/disciplinas \
   -H "Content-Type: application/json" \
   -d '{
-    "nome": "Cálculo I",
-    "cargaHoraria": 60,
-    "ementa": "Limites, derivadas e aplicações"
+    "nome": "topico java para web",
+    "cargaHoraria": 40,
+    "ementa": "Praticas em sala"
   }'
 ```
 
@@ -146,7 +146,7 @@ curl -X POST http://localhost:8080/disciplinas \
 curl -X POST http://localhost:8080/turmas \
   -H "Content-Type: application/json" \
   -d '{
-    "nome": "2024.1-A",
+    "nome": "2025.1 manhã",
     "disciplina": {"id": 1},
     "professor": {"id": 1}
   }'
