@@ -57,10 +57,10 @@ public class DataInitializer implements CommandLineRunner {
         Matricula matricula = new Matricula(aluno, turma, "ativo");
         matriculaRepository.save(matricula);
         
-        System.out.println("✅ Dados iniciais carregados com sucesso!");
-        System.out.println("📚 Professor Cornelli cadastrado");
-        System.out.println("📖 Disciplina TJW cadastrada");
-        System.out.println("👥 Turma 2025.1 Manhã criada");
-        System.out.println("🎓 Aluno João Silva matriculado");
+        System.out.println("Dados iniciais carregados com sucesso!");
+        System.out.println("Professor Cornelli cadastrado");
+        System.out.println("Disciplina TJW cadastrada");
+        System.out.println("Turma 2025.1 Manhã criada");
+        System.out.println("Aluno João Silva matriculado");
     }
 } 
